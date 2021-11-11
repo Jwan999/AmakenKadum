@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="flex justify-between py-1" style="background-color:#40A0A7;">
+      <!--navbar-->
+      <div class="flex">
+        <!--logo and text-->
+        <div class="mt-2 flex">
+          <!--logo-->
+          <div class="w-12 ml-3">
+            <img src="IMG_20210902_143818_039.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-2 text-white visited:text-green-900 space-x-3 mr-3 mt-4">
+        <!--qouick access-->
+        <a href="contactus.html">Contact Us</a>
+        <a href="email.html">Suggestions</a>
+      </div>
+    </div>
+    <div>
+      <!--photo-->
+      <img class="w-full  md:h-full" src="PicsArt_10-05-03.46.png">
+    </div>
+    <div class=" mt-4 space-y-2 ml-4">
+      <!--descreption-->
+      <div class="flex justify-between"> <!--gif and our story-->
+       <div class="space-y-1"><!--all the text-->
+        <div class="text-4xl ml-3 ">
+          <div id="family">
+            <h1 class="underline mb-2">Our Story</h1>
+          </div>
+        </div>
+<div class=" text-gray-500 ml-2 mt-2">
+        <span>Amakin is an individual project.</span>
+      </div>
+      
+      <div class=" text-gray-500 ml-2">
+        <span>It's purpose is to deliver an image about
+          the places that deserve to be seen, visited and known</span>
+      </div>
+      <div class=" text-gray-500 ml-2">
+        <span>The places which haven't got what it deserves, we will deliver a picture about
+          them and let you see them through our eyes</span>
+      </div>
+      <div class=" text-gray-500 ml-2">
+        Those places could be museums, traditional markets, normal shops, restaurants,
+        malls, cafes, public or private projects! whether
+      </div>
+      <div class=" text-gray-500 ml-2">
+        It's a normal or a fancy place they all have their stories and a spirituality of
+        its own which deserves to be talked about, thus you'd
+      </div>
+      <div class=" text-gray-500 ml-2">
+        See Iraq from a different scope reflecting the beauty of every place we visit.
+      </div>
+      </div>
+      <div class="w-96"> <!--gif-->
+        <img class="mr-10 " src="https://cdn.dribbble.com/users/2095732/screenshots/5054893/gif-character-youtuber-vlogger.gif" alt="">
+      </div>
+    </div>
+    </div>
+    <div class="mt-10">
+      <!--buttons-->
+      <div class="text-5xl flex justify-center ml-4 font-bold mr-4" style="color: #40A0A7;">
+        <h1>POSTS</h1>
+      </div>
+      <div class="flex justify-around mt-8">
+        <div>
+          <button @click="section = 'Baghdad'" class="border-2 rounded-lg text-white h-10 w-44"
+            style="background-color: #40A0A7;">Baghdad</button>
+        </div>
+        <div>
+          <button @click="section = 'Basra'" class="border-2 rounded-lg text-white h-10 w-44"
+            style="background-color: #40A0A7;">Basra</button>
+        </div>
+        <div>
+          <button @click="section = 'Mosul'" class="border-2 rounded-lg text-white h-10 w-44"
+            style="background-color: #40A0A7;">Mosul</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <!--posts-->
+      <div class="px-3">
+        <!--Baghdad-->
+        <div class="mt-10 space-y-7" v-if="section == 'Baghdad'">
+          <div class="text-5xl p-3 flex justify-center" style="color: #40A0A7;">
+            Baghdad
+          </div>
+          <!--cards-->
+          <div class=" object-cover transform hover:scale-x-100 hover:scale-y-100">
+            <!--first cards-->
+            <div class="grid grid-cols-3 gap-7">
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400 "><img class="h-72 w-full"
+                  src="Subpost_1_عمي_يا_بياع_الورد،_گوللي_الورد_بيش_قصتنا_اليوم_فريدة_لمحبين.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">زيونة روز</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">متجر لبيع الورد وتغليف الهدايا في منطقة زيونة</h4>
+                <a href="rose.html">
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div>
+                  </button>
+                </a>
+              </div>
+
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Subpost_2_من_صدك_أحس_نحتاج_مثل_بيت_تركيب_بكل_مكان_بمحافظاتنا،_لأن.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">بيت التركيب</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">مكان لجمع الموسيقى والرسم والباليه بشكل مختلف</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="house.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button>
+              </div></a>
+
+
+
+
+
+              <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Subpost_1_من_تشوف_شباب_يسوون_مشروع_بأكثر_شي_يحبوه_فتأكد_حيطبقون.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2">Next Level</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">واحدة من اقوى قاعات الكيمنك قوة وعصرية</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="NEXTLEVEL.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button></a>
+              </div>
+            </div>
+          </div>
+          <div class=" object-cover">
+            <!--second cards-->
+            <div class="grid grid-cols-3 gap-7">
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Subpost_1_عمي_يا_بياع_الورد،_گوللي_الورد_بيش_قصتنا_اليوم_فريدة_لمحبين.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">بياع الورد</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">متجر لبيع الورد وتغليف الهدايا في منطقة زيونة</h4>
+                <a href="rose.html">
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div>
+                  </button>
+                </a>
+              </div>
+
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Subpost_2_من_صدك_أحس_نحتاج_مثل_بيت_تركيب_بكل_مكان_بمحافظاتنا،_لأن.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">بيت التركيب</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">مكان لجمع الموسيقى والرسم والباليه بشكل مختلف</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="house.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button></a>
+              </div>
+
+
+
+
+
+              <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Subpost_1_من_تشوف_شباب_يسوون_مشروع_بأكثر_شي_يحبوه_فتأكد_حيطبقون.jpg" alt="">
+                <h1 class="text-2xl mt-3 px-2">Next Level</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">واحدة من اقوى قاعات الكيمنك قوة وعصرية</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="NEXTLEVEL.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+        <div class="mt-10 space-y-7" v-if="section == 'Basra'">
+          <!--Basra-->
+<div class="text-5xl p-3 flex justify-center" style="color: #40A0A7;">
+              Basra
+            </div>
+          <!--cards-->
+          <div class=" object-cover">
+            
+            <!--first cards-->
+            <div class="grid grid-cols-3 gap-7">
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="الطاحونة الذهبية/photo_2021-09-24_21-03-23_adobespark.jfif" alt="">
+                <h1 class="text-2xl mt-3 px-2">Le Moulin D'or</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">كوفي لتقديم الحلويات والقهوة بشكل باريسي</h4>
+                <a href="lem.html">
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div>
+                  </button>
+                </a>
+              </div>
+
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="Basra book bank/photo_2021-09-16_21-08-19_adobespark.jfif" alt="">
+                <h1 class="text-2xl mt-3 px-2">Basra Book Bank</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">مكان للقراءة والمطالعة بجو وبيئة مناسبين</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="basra.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button>
+              </div></a>
+
+
+
+
+
+              <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="السعفة الذهبية/photo_2021-11-05_21-48-49_adobespark.jfif" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">السعفة الذهبية</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">مكان لطيف بصراوي بأبسط تفاصيله</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="golden.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button></a>
+              </div>
+            </div>
+          </div>
+          <div class=" object-cover">
+            <!--second cards-->
+            <div class="grid grid-cols-3 gap-7">
+
+
+              <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                src="الطاحونة الذهبية/photo_2021-09-24_21-03-23_adobespark.jfif" alt="">
+              <h1 class="text-2xl mt-3 px-2">Le Moulin D'or</h1>
+              <h4 class="mt-1 px-2 text-sm text-right">كوفي لتقديم الحلويات والقهوة بشكل باريسي</h4>
+              <a href="lem.html">
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <div>
+                    <h1>لقراءة المقال</h1>
+                  </div>
+                </button>
+              </a>
+            </div>
+
+
+
+            <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+              src="Basra book bank/photo_2021-09-16_21-08-19_adobespark.jfif" alt="">
+            <h1 class="text-2xl mt-3 px-2">Basra Book Bank</h1>
+            <h4 class="mt-1 px-2 text-sm text-right">مكان للقراءة والمطالعة بجو وبيئة مناسبين</h4>
+            <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+              style="background-color: #40A0A7;">
+              <a href="basra.html">
+                <div>
+                  <h1>لقراءة المقال</h1>
+                </div></button>
+          </div></a>
+
+
+
+
+
+          <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+            src="السعفة الذهبية/photo_2021-11-05_21-48-49_adobespark.jfif" alt="">
+          <h1 class="text-2xl mt-3 px-2 text-right">السعفة الذهبية</h1>
+          <h4 class="mt-1 px-2 text-sm text-right">مكان لطيف بصراوي بأبسط تفاصيله</h4>
+          <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+            style="background-color: #40A0A7;">
+            <a href="golden.html">
+              <div>
+                <h1>لقراءة المقال</h1>
+              </div></button></a>
+        </div>
+            </div>
+          </div>
+        </div>
+        <div v-if="section == 'Mosul'">
+          
+          <!--Mosul-->
+          <div class="text-5xl p-14 flex justify-center" style="color: #40A0A7;">
+            Mousal
+          </div>
+          <div class="flex justify-center items-center mt-32">
+            
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84dfebf5-0a99-4b28-8a22-ca00c595c001/d2hecq9-25fa1a64-dbc3-4258-99fe-a3b8d00c91ea.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzg0ZGZlYmY1LTBhOTktNGIyOC04YTIyLWNhMDBjNTk1YzAwMVwvZDJoZWNxOS0yNWZhMWE2NC1kYmMzLTQyNTgtOTlmZS1hM2I4ZDAwYzkxZWEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.0zvvDls4K2s2j1YPGJL6eIwi-1gMCnVWSMY3ZOB6S-0" alt="">
+          </div>
+          <div class="flex justify-center items-center text-8xl" style="color: #40A0A7;">
+            <h1>coming soon!</h1>
+          </div>
+        </div>
+        <div>
+          <!--everything-->
+          <div class="mt-10 space-y-7">
+            <div class="text-5xl p-3 flex justify-center" style="color: #40A0A7;">
+                All Posts
+              </div>
+            <!--cards-->
+            <div class=" object-cover">
+              
+              <!--first cards-->
+              <div class="grid grid-cols-3 gap-7">
+
+
+                <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                    src="Subpost_1_عمي_يا_بياع_الورد،_گوللي_الورد_بيش_قصتنا_اليوم_فريدة_لمحبين.jpg" alt="">
+                  <h1 class="text-2xl mt-3 px-2 text-right">زيونة روز</h1>
+                  <h4 class="mt-1 px-2 text-sm text-right">متجر لبيع الورد وتغليف الهدايا في منطقة زيونة</h4>
+                  <a href="rose.html">
+                    <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                      style="background-color: #40A0A7;">
+                      <div>
+                        <h1>لقراءة المقال</h1>
+                      </div>
+                    </button>
+                  </a>
+                </div>
+
+
+
+                <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                    src="Subpost_2_من_صدك_أحس_نحتاج_مثل_بيت_تركيب_بكل_مكان_بمحافظاتنا،_لأن.jpg" alt="">
+                  <h1 class="text-2xl mt-3 px-2 text-right">بيت التركيب</h1>
+                  <h4 class="mt-1 px-2 text-sm text-right">مكان لجمع الموسيقى والرسم والباليه بشكل مختلف</h4>
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <a href="house.html">
+                      <div>
+                        <h1>لقراءة المقال</h1>
+                      </div></button>
+                </div></a>
+
+
+
+
+
+                <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                    src="Subpost_1_من_تشوف_شباب_يسوون_مشروع_بأكثر_شي_يحبوه_فتأكد_حيطبقون.jpg" alt="">
+                  <h1 class="text-2xl mt-3 px-2">Next Level</h1>
+                  <h4 class="mt-1 px-2 text-sm text-right">واحدة من اقوى قاعات الكيمنك قوة وعصرية</h4>
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <a href="NEXTLEVEL.html">
+                      <div>
+                        <h1>لقراءة المقال</h1>
+                      </div></button></a>
+                </div>
+              </div>
+            </div>
+            <div class=" object-cover">
+              <!--second cards-->
+              <div class="grid grid-cols-3 gap-7">
+
+
+                <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                    src="الطاحونة الذهبية/photo_2021-09-24_21-03-23_adobespark.jfif" alt="">
+                  <h1 class="text-2xl mt-3 px-2">Le Moulin D'or</h1>
+                  <h4 class="mt-1 px-2 text-sm text-right">كوفي لتقديم الحلويات والقهوة بشكل باريسي</h4>
+                  <a href="lem.html">
+                    <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                      style="background-color: #40A0A7;">
+                      <div>
+                        <h1>لقراءة المقال</h1>
+                      </div>
+                    </button>
+                  </a>
+                </div>
+
+
+
+                <div class="rounded  shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                    src="Basra book bank/photo_2021-09-16_21-08-19_adobespark.jfif" alt="">
+                  <h1 class="text-2xl mt-3 px-2">Basra Book Bank</h1>
+                  <h4 class="mt-1 px-2 text-sm text-right">مكان للقراءة والمطالعة بجو وبيئة مناسبين</h4>
+                  <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                    style="background-color: #40A0A7;">
+                    <a href="basra.html">
+                      <div>
+                        <h1>لقراءة المقال</h1>
+                      </div></button>
+                </div></a>
+
+
+
+
+
+                <div class="rounded shadow-xl border-2 border-green-400"><img class="h-72 w-full"
+                  src="السعفة الذهبية/photo_2021-11-05_21-48-49_adobespark.jfif" alt="">
+                <h1 class="text-2xl mt-3 px-2 text-right">السعفة الذهبية</h1>
+                <h4 class="mt-1 px-2 text-sm text-right">مكان لطيف بصراوي بأبسط تفاصيله</h4>
+                <button class="mt-10 px-3 py-1 border-2 rounded-lg text-white mb-3 w-full"
+                  style="background-color: #40A0A7;">
+                  <a href="golden.html">
+                    <div>
+                      <h1>لقراءة المقال</h1>
+                    </div></button></a>
+              </div>
+              </div>
+            </div>
+          </div>
+          <!--end-->
+        </div>
+      </div>
+    </div>
+    <!--END-->
+    <div class="h- flex justify-between py-5 mt-10" style="background-color: #40A0A7;">
+      <div> <!--logo-->
+        <img class="w-32 ml-10" src="IMG_20210902_143818_039.png" alt="">
+      </div>
+      <div class="mt-12 text-white text-2xl font-bold" id="family">
+        We Hope We Helped You To Find A Place To Go
+      </div>
+      <div class="mr-10"> <!--anything u want-->
+        <div id="family" class="text-white text-xl">
+          Follow Us On
+        </div>
+        <div>
+          <a href="https://instagram.com/amakin.iq?utm_medium=copy_link" style="color:#D92D79;">Instagram <br></a>
+          <a href="https://t.me/amakiniq" style="color: blue;">Telegram <br></a>
+          <a href="https://vm.tiktok.com/ZSe8NJ1UK/" style="color: #FF0050;">TikTok</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    let vue = new Vue({
+      el: "#app",
+      data: {
+        section: ""
+      }
+    })
+  </script>
+</body>
+
+</html>
